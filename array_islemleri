@@ -23,3 +23,7 @@ var res = ['2', '10', '11'].map(function(v) {
 
 document.write('<pre>' + JSON.stringify(res, null, 3) + '<pre>')
 
+// veya
+
+var res = ['2', '10', '11'].map(v => parseInt(v, 10));
+document.write('<pre>' + JSON.stringify(res, null, 3) + '<pre>')

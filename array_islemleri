@@ -1,0 +1,25 @@
+Array'e çevirmek
+
+__ = "4,5,3";
+__ = __.split(",");
+// ['4','5','3']
+
+
+
+JSON String'e çevirmek
+
+Console.log(JSON.stringify(__));
+
+Array içerisindeki stringleri integer'e çevirmek
+
+var res = ['2', '10', '11'].map(Number);
+document.write('<pre>' + JSON.stringify(res, null, 3) + '<pre>')
+
+veya
+
+var res = ['2', '10', '11'].map(function(v) {
+  return parseInt(v, 10);
+});
+
+document.write('<pre>' + JSON.stringify(res, null, 3) + '<pre>')
+

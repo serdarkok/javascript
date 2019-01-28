@@ -27,3 +27,22 @@ document.write('<pre>' + JSON.stringify(res, null, 3) + '<pre>')
 
 var res = ['2', '10', '11'].map(v => parseInt(v, 10));
 document.write('<pre>' + JSON.stringify(res, null, 3) + '<pre>')
+
+
+// Array içerisindeki objeleri başka bir array'e göre sıralamak
+// lodash kullanıyoruz, ayrıca sıralama yapılacak olan array'in value'leri integer olmasına dikkat et
+__ = [4,6,8,2,1];
+
+_question = [
+{id: 2, veri : 'veri-veri'},
+{id: 1, veri : 'veri-veri'},
+{id: 6, veri : 'veri-veri'},
+{id: 4, veri : 'veri-veri'},
+{id: 8, veri : 'veri-veri'},
+]
+
+_question = _.sortBy(_question, function(item){
+   return __.indexOf(item.id)
+});
+
+console.log(_question)

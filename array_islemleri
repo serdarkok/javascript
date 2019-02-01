@@ -46,3 +46,6 @@ _question = _.sortBy(_question, function(item){
 });
 
 console.log(_question)
+
+// Gelen verinin türünü öğrenmek
+console.log(typeof veri.adi);

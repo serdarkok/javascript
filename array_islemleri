@@ -49,3 +49,61 @@ console.log(_question)
 
 // Gelen verinin türünü öğrenmek
 console.log(typeof veri.adi);
+
+
+ARRAY İŞLEMLERİ:
+
+var a = [1,2,3,4,5];
+var x = [a,b];
+var s = ['ali', 'veli', 'kemal'];
+
+// pop bir array'in sol elementini dışarı çıkarır ve ilgili arrayden son elementi siler.
+
+var b = a.pop(); // 5;
+
+
+// unshift bir array'in ilk elementine eklemelede bulunur. 
+
+var c = '6';
+var d = [2,3];
+
+a.unshift(c); // [6,1,2,3,4,5]
+a.unshift(d); // [[2,3],1,2,3,4,5]
+a.unshift(...d) // [2,3,1,2,3,4,5]
+
+
+// concat iki veya daha fazla array'in elementlerini birleştirir. merge eder.
+
+a.concat(x); // [1,2,3,4,5,a,b]
+
+let b = [...a, ...x]; // [1,2,3,4,5,a,b]
+
+// push bir array'in sonuna element ekler.
+
+a.push('5'); // [1,2,3,4,5,6]
+
+// slice bir array'deki belirtilen start end aralığındaki elementleri alır. diğerlerini siler.
+// end dahil değildir. eğer end belirtilmemişse element bitene kadar devam eder.
+
+a.slice(2,3); // [3];
+a.slice(2); // [3,4,5];
+
+// join bir array içerisindeki elementleri stringe çevirir. 
+
+a.join('-'); // 1-2-3-4-5
+a.join(''); // 12345
+a.join(); // 1,2,3,4,5
+
+// shift bir array içerisindeki ilk elementi siler.
+
+a.shift(); // [2,3,4,5]
+
+// Array içerisindeki her bir elementin uzunluğunu hesaplama
+
+s.map(element => element.length); // [3,4,5]
+veya
+s.map(({lenght}) => lenght);
+
+// indexOf bir array içerisindeki elementin index değerini verir
+
+a.indexOf(4); // 3
